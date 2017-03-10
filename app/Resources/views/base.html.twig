@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}Vue.js and Symfony{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+</head>
+<body>
+{% block body %}{% endblock %}
+{% block javascripts %}
+    {% if app.environment == 'dev' %}
+        <script src="http://127.0.0.1:8080/app.js"></script>
+    {% endif %}
+{% endblock %}
+</body>
+</html>

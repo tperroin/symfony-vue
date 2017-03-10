@@ -1,0 +1,18 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <div id="app">
+
+        <hello :msg="'{{ data }}'"></hello>
+
+    </div>
+{% endblock body %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% if app.environment != 'dev' %}
+        <script src="{{ asset('bundles/appbundle/js/manifest.js') }}"></script>
+        <script src="{{ asset('bundles/appbundle/js/vendor.js') }}"></script>
+        <script src="{{ asset('bundles/appbundle/js/app.js') }}"></script>
+    {% endif %}
+{% endblock javascripts %}
