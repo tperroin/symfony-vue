@@ -4,8 +4,8 @@ window.$ = window.jQuery = require('jquery')
 require('./assets/semantic/dist/semantic.css')
 require('./assets/semantic/dist/semantic.js')
 
-import Vue from "vue";
-import Hello from "./components/Hello";
+import Vue from 'vue'
+import Hello from './components/Hello'
 
 Vue.config.delimiters = ['${', '}']
 
